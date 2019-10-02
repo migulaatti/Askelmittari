@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     @Override
     protected void onPause() {
         super.onPause();
-        running = false;
+        running = true;
     }
 
 
