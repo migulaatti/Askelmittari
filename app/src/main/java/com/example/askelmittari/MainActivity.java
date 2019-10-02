@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
      */
     @Override
     public void onSensorChanged(SensorEvent event) {
-        steps.setText(String.valueOf(event.values[0]));
+        steps.setText(String.valueOf((int)event.values[0]));
     }
 
     @Override

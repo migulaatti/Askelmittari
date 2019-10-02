@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Askelmittari</string>
+    <string name="bmi">BMI</string>
 </resources>
