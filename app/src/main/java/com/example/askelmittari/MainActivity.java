@@ -30,7 +30,9 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         steps = findViewById(R.id.steps);
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
     }
-
+    /*
+    Jos sensorit löytyvät, aloittaa askelten tallentamisen
+     */
     @Override
     protected void onResume() {
         super.onResume();
@@ -42,14 +44,18 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             Toast.makeText(this, "Sensor not found!", Toast.LENGTH_SHORT).show();
         }
     }
-
+    /*
+    "sammuttaa" sensorin jos sovellus suljetaan
+     */
     @Override
     protected void onPause() {
         super.onPause();
         running = true;
     }
 
-
+    /*
+    päivittää mittarin lukeman, kun sensori havaitsee askeleen/askelia
+     */
     @Override
     public void onSensorChanged(SensorEvent event) {
         steps.setText(String.valueOf(event.values[0]));
