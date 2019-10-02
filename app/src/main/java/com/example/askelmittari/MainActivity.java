@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     }
 
     /*
-    päivittää mittarin lukeman, kun sensori havaitsee askeleen
+    päivittää mittarin lukeman, kun sensori havaitsee askeleen.
      */
     @Override
     public void onSensorChanged(SensorEvent event) {
