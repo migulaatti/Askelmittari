@@ -13,16 +13,17 @@ public class CalorieCounter extends AppCompatActivity {
 
     private EditText Kg;
     private EditText Time;
-    private TextView Result;
+    private TextView Resulth;
+    private TextView Resultmin;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calorie);
+        setContentView(R.layout.activity_calorie_counter);
         Time = (EditText) findViewById(R.id.Time);
         Kg = (EditText) findViewById(R.id.Kg);
-        Result = (TextView) findViewById(R.id.Result);
+        Resulth = (TextView) findViewById(R.id.Resulth);
 
 
     }
@@ -33,10 +34,10 @@ public class CalorieCounter extends AppCompatActivity {
         String KgStr = Kg.getText().toString();
         double TimeValue = Double.parseDouble(TimeStr);
         double KgValue = Double.parseDouble(KgStr);
-        double KgTime = KgValue * 2.9;
+        double KgTime = KgValue * 2.9 * TimeValue;
         double calories = KgTime / TimeValue;
-        String.format("%.2f", calories);
-        TextView tv = findViewById(R.id.Result);
-        tv.setText(Double.toString(calories));
+        TextView tv = findViewById(R.id.Resulth);
+        tv.setText(String.format("%.2f", KgTime));
+
     }
 }
