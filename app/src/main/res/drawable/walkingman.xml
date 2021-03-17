@@ -1,0 +1,10 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/stick1"
+        android:duration="225"/>
+    <item android:drawable="@drawable/stick2"
+        android:duration="225"/>
+    <item android:drawable="@drawable/stick3"
+        android:duration="225"/>
+    <item android:drawable="@drawable/sticklol"
+        android:duration="225"/>
+</animation-list>
